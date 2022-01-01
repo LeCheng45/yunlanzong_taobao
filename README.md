@@ -451,3 +451,28 @@
   ```
 
   
+
+## 删除订单
+
+- URL：/delOrder
+
+- method:post
+
+- Request querystring
+
+  ```
+  userId:13
+  orderItemId:9
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "删除成功"
+  }
+  ```
+
+  
