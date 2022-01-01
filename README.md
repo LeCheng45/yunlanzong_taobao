@@ -308,3 +308,146 @@
   ```
 
   
+
+## 添加商品到购物车
+
+- URL：/shoppingCart/addGood
+
+- method:post
+
+- Request querystring
+
+  ```
+  userId:13
+  GoodsId:1
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "添加成功"
+  }
+  ```
+
+  
+
+## 从购物车删除商品
+
+- URL：/shoppingCart/delGood
+
+- method:post
+
+- Request querystring
+
+  ```
+  cartItemId:9
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "删除成功"
+  }
+  ```
+
+## 更新商品数量
+
+- URL：/shoppingCart/delGood
+
+- method:post
+
+- Request querystring
+
+  ```
+  cartItemId:9
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "删除成功"
+  }
+  ```
+
+  
+
+## 查询所有订单
+
+- URL：/orders
+
+- method:get
+
+- Request querystring
+
+  ```
+  userId:13
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": [
+          {
+              "orderItemId": 1,
+              "goodsId": 1,
+              "goodsName": "大还丹",
+              "categoryId": 15,
+              "goodsCoverImg": "/img/huanyuandan.jpg",
+              "sellingPrice": 999,
+              "goodsCount": 10,
+              "createTime": "2021-12-29T17:22:37",
+              "orderStatus": 0
+          },
+          {
+              "orderItemId": 2,
+              "goodsId": 2,
+              "goodsName": "天鼎",
+              "categoryId": 16,
+              "goodsCoverImg": "/img/WSD.a3fad85b.png",
+              "sellingPrice": 1000,
+              "goodsCount": 1,
+              "createTime": "2021-12-29T17:22:37",
+              "orderStatus": 0
+          }
+      ],
+      "msg": "获取订单信息成功"
+  }
+  ```
+  
+  
+
+## 添加订单(添加成功后会删除购物车相关信息)
+
+- URL：/addOrders
+
+- method:post
+
+- Request querystring
+
+  ```
+  userId:13
+  cartItemId:5
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "添加订单成功"
+  }
+  ```
+
+  
