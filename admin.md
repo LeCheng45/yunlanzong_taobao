@@ -592,3 +592,208 @@ storeId:13
 }
 ```
 
+
+
+###### 所有订单信息
+
+* URL: /admin/ordersInfo
+
+* method: get
+
+* Request querystring
+
+```json
+无
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": [
+        {
+            "orderItemId": 1,
+            "goodsId": 1,
+            "goodsName": "大还丹",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 999,
+            "goodsCount": 10,
+            "createTime": "2021-12-29T17:22:37",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 2,
+            "goodsId": 2,
+            "goodsName": "天鼎",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000,
+            "goodsCount": 1,
+            "createTime": "2021-12-29T17:22:37",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 3,
+            "goodsId": 3,
+            "goodsName": "焚决",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000000000,
+            "goodsCount": 1,
+            "createTime": "2021-12-29T17:22:37",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 4,
+            "goodsId": 6,
+            "goodsName": "还元丹",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000,
+            "goodsCount": 1,
+            "createTime": "2021-12-30T16:28:36",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 5,
+            "goodsId": 7,
+            "goodsName": "反命丹",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000,
+            "goodsCount": 1,
+            "createTime": "2021-12-30T16:28:36",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 6,
+            "goodsId": 8,
+            "goodsName": "合欢散",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000,
+            "goodsCount": 1,
+            "createTime": "2021-12-30T16:28:36",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 7,
+            "goodsId": 9,
+            "goodsName": "培元丹",
+            "categoryId": null,
+            "goodsCoverImg": "",
+            "sellingPrice": 1000,
+            "goodsCount": 1,
+            "createTime": "2021-12-30T16:28:36",
+            "orderStatus": 0
+        },
+        {
+            "orderItemId": 8,
+            "goodsId": 9,
+            "goodsName": "培元丹",
+            "categoryId": null,
+            "goodsCoverImg": "/admin/dist/img/no-img.png",
+            "sellingPrice": 1,
+            "goodsCount": 1,
+            "createTime": "2021-12-31T10:49:45",
+            "orderStatus": 0
+        }
+    ],
+    "msg": "获取订单信息成功"
+}
+```
+
+
+
+###### 修改订单信息
+
+* URL: /admin/ordersInfo/update
+
+* method: post
+
+* Request querystring
+
+```json
+{
+    "orderItemId": 9,
+    "goodsId": 9,
+    "goodsName": "培元丹2333",
+    "categoryId": null,
+    "goodsCoverImg": "",
+    "sellingPrice": 1000,
+    "goodsCount": 99,
+    "createTime": "2021-12-30T16:28:36",
+    "orderStatus": 0
+}
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "修改订单信息成功"
+}
+```
+
+
+
+###### 删除订单信息
+
+* URL: /admin/ordersInfo/delete
+
+* method: post
+* Request querystring
+
+```json
+orderItemId:9
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "删除订单成功"
+}
+```
+
+
+
+###### 添加订单信息
+
+* URL: /admin/ordersInfo/insert
+
+* method: post
+
+* Request querystring
+
+```json
+{
+    "orderItemId": 9,
+    "goodsId": 9,
+    "goodsName": "培元丹",
+    "categoryId": null,
+    "goodsCoverImg": "",
+    "sellingPrice": 1000,
+    "goodsCount": 99,
+    "createTime": "2021-12-30T16:28:36",
+    "orderStatus": 0
+}
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "添加订单信息成功"
+}
+```
+
+
