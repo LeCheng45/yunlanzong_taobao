@@ -624,65 +624,40 @@ Response Body
   }
   ```
 
-## 查询商家所有的订单
+## 商家上传商品
 
-- URL：/store/allOrders
+- URL：/store/upload
 
-- method:get
+- method:post
 
 - Request querystring
 
   ```
-  StoreId:13
+  goodsName:极品女仆
+  goodsIntro:想怎么干就怎么干
+  goodsCategoryId:21
+  goodsDetailContent:你懂的
+  sellingPrice:8887
+  storeId:13
   ```
+
+- Request form-data
+
+  key:value
+
+```
+file:filedata
+```
+
+
 
 - Response Body
 
   ```json
   {
       "flag": true,
-      "data": [
-          {
-              "orderItemId": 1,
-              "goodsId": 6,
-              "goodsName": "还元丹",
-              "categoryId": 15,
-              "goodsCoverImg": "/img/lingshoudan.jpg",
-              "sellingPrice": 1,
-              "goodsCount": 1,
-              "createTime": "2022-01-02T12:51:38",
-              "orderStatus": 1,
-              "loginName": "11234567890",
-              "userId": 13
-          },
-          {
-              "orderItemId": 2,
-              "goodsId": 1,
-              "goodsName": "大还丹",
-              "categoryId": 15,
-              "goodsCoverImg": "/img/huanyuandan.jpg",
-              "sellingPrice": 999,
-              "goodsCount": 1,
-              "createTime": "2022-01-02T12:51:38",
-              "orderStatus": 0,
-              "loginName": "11234567890",
-              "userId": 13
-          },
-          {
-              "orderItemId": 3,
-              "goodsId": 8,
-              "goodsName": "合欢散",
-              "categoryId": 15,
-              "goodsCoverImg": "/img/zhujidan.jpg",
-              "sellingPrice": 1,
-              "goodsCount": 1,
-              "createTime": "2022-01-02T12:51:38",
-              "orderStatus": 0,
-              "loginName": "11234567890",
-              "userId": 13
-          }
-      ],
-      "msg": "获取订单信息成功"
+      "data": null,
+      "msg": "商品上传成功"
   }
   ```
 
