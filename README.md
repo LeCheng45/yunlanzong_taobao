@@ -499,3 +499,190 @@
   ```
 
   
+
+## 查询是否为商家
+
+- URL：/store/isStore
+
+- method:get
+
+- Request querystring
+
+  ```
+  userId:13
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": {
+          "storeId": 13,
+          "storeName": "万药阁",
+          "introduceSign": "买不了吃亏买不了上当"
+      },
+      "msg": "用户已开通商铺"
+  }
+  ```
+
+
+
+
+- Response Body
+
+  ```json
+  {
+      "flag": false,
+      "data": null,
+      "msg": "用户还没有开通商铺,请先注册"
+  }
+  ```
+
+  
+
+## 注册商家
+
+- URL：/store/register
+
+- method:post
+
+- Request querystring
+
+  ```
+  userId:17
+  storeName:七星阁
+  introduceSign:我的评价是没有评价
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": {
+          "storeId": 15
+      },
+      "msg": "注册店铺成功"
+  }
+  ```
+
+Response Body
+
+```json
+{
+    "flag": false,
+    "data": null,
+    "msg": "该用户已经注册了店铺"
+}
+```
+
+## 查询商家所有商品
+
+- URL：/store/allGoods
+
+- method:get
+
+- Request querystring
+
+  ```
+  StoreId:13
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": [
+          {
+              "goodsId": 1,
+              "goodsName": "大还丹",
+              "goodsIntro": "活死人肉白骨",
+              "goodsCategoryId": 15,
+              "goodsCoverImg": "/img/huanyuandan.jpg",
+              "goodsDetailContent": "一种神奇的丹药，可以使服用者即刻治愈身体上的伤，由于药效强劲，甚至被人称为可以将死人复活。",
+              "originalPrice": 999,
+              "sellingPrice": 999,
+              "stockNum": 100,
+              "storeName": "万药阁"
+          },
+          {
+              "goodsId": 4,
+              "goodsName": "筑基丹",
+              "goodsIntro": "提升肉体强度，为突破筑基提供能量",
+              "goodsCategoryId": 15,
+              "goodsCoverImg": "/img/guiyuandan.jpg",
+              "goodsDetailContent": "神奇的丹药",
+              "originalPrice": 111,
+              "sellingPrice": 111,
+              "stockNum": 123,
+              "storeName": "万药阁"
+          }
+      ],
+      "msg": "获取商品信息成功"
+  }
+  ```
+
+## 查询商家所有的订单
+
+- URL：/store/allOrders
+
+- method:get
+
+- Request querystring
+
+  ```
+  StoreId:13
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": [
+          {
+              "orderItemId": 1,
+              "goodsId": 6,
+              "goodsName": "还元丹",
+              "categoryId": 15,
+              "goodsCoverImg": "/img/lingshoudan.jpg",
+              "sellingPrice": 1,
+              "goodsCount": 1,
+              "createTime": "2022-01-02T12:51:38",
+              "orderStatus": 1,
+              "loginName": "11234567890",
+              "userId": 13
+          },
+          {
+              "orderItemId": 2,
+              "goodsId": 1,
+              "goodsName": "大还丹",
+              "categoryId": 15,
+              "goodsCoverImg": "/img/huanyuandan.jpg",
+              "sellingPrice": 999,
+              "goodsCount": 1,
+              "createTime": "2022-01-02T12:51:38",
+              "orderStatus": 0,
+              "loginName": "11234567890",
+              "userId": 13
+          },
+          {
+              "orderItemId": 3,
+              "goodsId": 8,
+              "goodsName": "合欢散",
+              "categoryId": 15,
+              "goodsCoverImg": "/img/zhujidan.jpg",
+              "sellingPrice": 1,
+              "goodsCount": 1,
+              "createTime": "2022-01-02T12:51:38",
+              "orderStatus": 0,
+              "loginName": "11234567890",
+              "userId": 13
+          }
+      ],
+      "msg": "获取订单信息成功"
+  }
+  ```
+
