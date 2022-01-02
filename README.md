@@ -475,4 +475,27 @@
   }
   ```
 
+## 更新订单(0:待支付;1:待商家发货;2:发货完成待签收3:签收完成;4:订单完成)
+
+- URL：/updateOrder
+
+- method:post
+
+- Request querystring
+
+  ```
+  orderItemId:1
+  status:1
+  ```
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "更新订单成功"
+  }
+  ```
+
   
