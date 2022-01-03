@@ -764,7 +764,7 @@ orderItemId:9
 
 
 
-###### 添加订单信息
+# 添加订单信息
 
 * URL: /admin/ordersInfo/insert
 
@@ -796,4 +796,53 @@ orderItemId:9
 }
 ```
 
+# 修改商品
 
+* URL: /admin/storesInfo/goods/update
+
+* method: post
+
+* Request querystring
+
+```json
+goodsId:21
+goodsName:高级版葵花宝典
+goodsIntro:不是什么人都能学的哦
+goodsDetailContent:不是什么人都能学的哦
+sellingPrice:1999
+
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "修改商品信息成功"
+}
+```
+
+# 删除商品
+
+* URL: /admin/storesInfo/goods/delete
+
+* method: post
+
+* Request querystring
+
+```json
+goodsId:21
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "删除商品成功"
+}
+```
+
+# 
