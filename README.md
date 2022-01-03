@@ -722,3 +722,79 @@ Response Body
   }
   ```
 
+## 对订单添加评论
+
+- URL：/addComment
+
+- method:post
+
+- Request querystring
+
+  ```
+  orderItemId:5
+  comment:真的不太行
+  ```
+
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "添加评论成功"
+  }
+  ```
+
+## 查询所有评论
+
+- URL：/comment
+
+- method:get
+
+- Request querystring
+
+  ```
+  goodsId:2
+  ```
+
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": [
+          {
+              "commentId": 1,
+              "orderItemId": 4,
+              "comment": "真不错,住在山里面真不错",
+              "goodsId": 2,
+              "createTime": "2022-01-03T13:39:58",
+              "userId": 13,
+              "loginName": "11234567890"
+          },
+          {
+              "commentId": 2,
+              "orderItemId": 4,
+              "comment": "真的不太行",
+              "goodsId": 2,
+              "createTime": "2022-01-03T14:00:50",
+              "userId": 13,
+              "loginName": "11234567890"
+          },
+          {
+              "commentId": 3,
+              "orderItemId": 4,
+              "comment": "其实还可以啦",
+              "goodsId": 2,
+              "createTime": "2022-01-03T14:03:04",
+              "userId": 13,
+              "loginName": "11234567890"
+          }
+      ],
+      "msg": "查询成功"
+  }
+  ```
+
+## 
