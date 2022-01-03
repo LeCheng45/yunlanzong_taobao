@@ -796,4 +796,96 @@ orderItemId:9
 }
 ```
 
+###### 修改商品信息
+
+* URL：/admin/storesInfo/goods/update
+
+* method: post
+
+* Request querystring
+
+```json
+{
+    "goodsId": 17,
+    "goodsName": "青莲地心火",
+    "goodsIntro": "生长于海底火山口的莲花炼化出来的火焰，万物可燃",
+    "goodsCategoryId": 18,
+    "goodsCoverImg": "/admin/dist/img/no-img.png",
+    "goodsDetailContent": "异火",
+    "originalPrice": 1000,
+    "sellingPrice": 1000,
+    "stockNum": 0,
+    "storeName": "万药阁"
+}
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "修改商品信息成功"
+}
+```
+
+
+
+###### 删除商品信息
+
+* URL：/admin/storesInfo/goods/delete
+
+* method: post
+
+* Request querystring
+
+```json
+goodsId:17
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "删除商品成功"
+}
+```
+
+
+
+###### 添加商品信息
+
+* URL：/admin/storesInfo/goods/insert
+
+* method: post
+
+* Request querystring
+
+```json
+{
+    "goodsId": 18,
+    "goodsName": "青莲地心火2333",
+    "goodsIntro": "生长于海底火山口的莲花炼化出来的火焰，万物可燃",
+    "goodsCategoryId": 18,
+    "goodsCoverImg": "/admin/dist/img/no-img.png",
+    "goodsDetailContent": "异火",
+    "originalPrice": 1000,
+    "sellingPrice": 1000,
+    "stockNum": 0,
+    "storeName": "万药阁"
+}
+```
+
+* Response body
+
+```json
+{
+    "flag": true,
+    "data": null,
+    "msg": "添加商品信息成功"
+}
+```
+
 
