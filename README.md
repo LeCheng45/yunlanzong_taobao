@@ -633,22 +633,15 @@ Response Body
 - Request querystring
 
   ```
-  goodsName:极品女仆
-  goodsIntro:想怎么干就怎么干
+  goodsName:极品丹药
+  goodsIntro:想怎么吃就怎么吃
   goodsCategoryId:21
   goodsDetailContent:你懂的
   sellingPrice:8887
   storeId:13
+  
+  file:filedata  //图片
   ```
-
-- Request form-data
-
-  key:value
-
-```
-file:filedata
-```
-
 
 
 - Response Body
@@ -658,6 +651,74 @@ file:filedata
       "flag": true,
       "data": null,
       "msg": "商品上传成功"
+  }
+  ```
+
+## 查询商品
+
+- URL：/goodsByName
+
+- method:get
+
+- Request querystring
+
+  ```
+  goods_name:丹
+  ```
+
+
+- Response Body
+
+  ```json
+  {
+      "flag": true,
+      "data": [
+          {
+              "goodsId": 1,
+              "goodsName": "大还丹",
+              "goodsIntro": "活死人肉白骨",
+              "goodsCategoryId": 15,
+              "goodsCoverImg": "/img/huanyuandan.jpg",
+              "goodsDetailContent": "一种神奇的丹药，可以使服用者即刻治愈身体上的伤，由于药效强劲，甚至被人称为可以将死人复活。",
+              "originalPrice": 999,
+              "sellingPrice": 999,
+              "stockNum": 100,
+              "storeName": "万药阁"
+          },
+          {
+              "goodsId": 4,
+              "goodsName": "筑基丹",
+              "goodsIntro": "提升肉体强度，为突破筑基提供能量",
+              "goodsCategoryId": 15,
+              "goodsCoverImg": "/img/guiyuandan.jpg",
+              "goodsDetailContent": "神奇的丹药",
+              "originalPrice": 111,
+              "sellingPrice": 111,
+              "stockNum": 123,
+              "storeName": "万药阁"
+          },
+          {
+              "goodsId": 5,
+              "goodsName": "驻颜丹",
+              "goodsIntro": "可以持久性地保持当前的容貌，颇受年轻女性喜爱",
+              "goodsCategoryId": 15,
+              "goodsCoverImg": "/img/fanmingdan.jpg",
+              "goodsDetailContent": "驻颜丹，可以使人容颜不老",
+              "originalPrice": 999,
+              "sellingPrice": 99,
+              "stockNum": 10,
+              "storeName": "万药阁"
+          }
+      ],
+      "msg": "获取商品信息成功"
+  }
+  ```
+
+  ```json
+  {
+      "flag": true,
+      "data": null,
+      "msg": "暂时没有这件商品"
   }
   ```
 
