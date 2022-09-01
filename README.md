@@ -17,7 +17,7 @@
 
     ```
     loginName:123456 //电话
-    nickName:金琦  //名称
+    nickName:李世豪  //名称
     password:123456  //密码
     ```
 
